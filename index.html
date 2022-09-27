@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="./assets/css/style.css" rel="stylesheet">
     <script defer src="./assets/js/script.js"></script>
 </head>
@@ -14,6 +18,69 @@
             <h1>Hello Wolds</h1>
         </section>
     </main>
+<header id="background">
+    <nav class="p-5">
+        <ul class="flex items-center justify-between">
+          <li>
+            <h1 class="text-lg sm:text-2xl font-bold">Wingman</h1>
+          </li>
+          <span class="flex space-x-4 items-center">
+            <li>
+              <a href="">About US</a>
+            </li>
+            <li>
+              <a href="">Recent Dates</a>
+            </li>
+            <li>
+              <a href="">Github Links</a>
+            </li>
+          </span>
+        </ul>
+      </nav>
+        <div class="grid text-center mt-96 py-28 h-screen">
+        <a class="pick underline underline-offset-8 decoration-2" href="#movie">Pick a date</a>
+        </div>
+</header>
+
+<main>
+
+
+<section class="my-5">
+    <div class="flex justify-center justify-around text-center p-2">
+        <div class="flex-col">
+          <h2 class="py-2" id="movie">Movie</h2>
+          <button id="movie-button"class="bg-black text-white p-3 rounded-lg">Click Here</button>
+        </div>
+        <div class="flex-col">
+          <h2 class="py-2">Food</h2>
+          <button id ="food-button"class="bg-black text-white p-3 rounded-lg">Click Here</button>
+        </div>
+        <div class="flex-col">
+          <h2 class="py-2">Drinks</h2>
+          <button id="drinks-button" class="bg-black text-white p-3 rounded-lg">Click Here</button>
+        </div>
+      </div>
+</section>
+<section>
+  <div></div>
+  <h2>Your Past Dates</h2>
+  
+
+</section>
+<section>
+    <div class="about-us bg-black text-white m-3 text-center p-5 flex-wrap flex justify-center justify-around">
+          <img class="p-2 rounded-full h-56"src="./assets/images/brandon.jpg" alt="">
+          <img class="p-2 rounded-full h-56 w-56"src="./assets/images/daniel.jpg" alt="">
+          <img class="p-2 rounded-full h-56"src="./assets/images/andrew.jpg" alt="">
+          <img class="p-2 rounded"src="https://via.placeholder.com/150" alt="">
+          <img class="p-2 rounded"src="https://via.placeholder.com/150" alt="">
+          <div class="col">
+        <h3 class="p-3">About Us</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore deleniti quas eius culpa sint adipisci debitis placeat vitae magnam molestiae, ipsa ipsam quia fugit est voluptatibus ea quae molestias?</p>
+      </div>
+    </div>
+</section>
+</main>
     
 </body>
 </html>
