@@ -5,7 +5,7 @@ main {
     background-image: url(../images/new\ jpeg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 2000px;
+    height: 1000px;
 }
 
 html {
@@ -20,7 +20,7 @@ header {
     color: white;
     font-family: 'Montserrat Alternates';
     transition: font-size .2s;
-    
+    height:45px;
 } 
 .pick:hover {
     color: #D1D1D1;
