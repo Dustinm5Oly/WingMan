@@ -100,3 +100,22 @@ function cocktailApi() {
 drinksButton.addEventListener('click', function() {
     cocktailApi()
 })
+
+
+const movieApiKey = '6f3f105acd904176840e0cce36308ce5'
+
+fetch(`https://api.themoviedb.org/3/movie/popular?api_key=6f3f105acd904176840e0cce36308ce5&language=en-US`)
+.then(function (response) {
+    return response.json()
+})
+.then(function (data) {
+    for (i=0; i<data.results.length; i++) {
+        // console.log(data.results[i])
+        const random = data.results[Math.floor(Math.random() * data.results.length)]
+        console.log(random)
+        console.log(random.title)
+        console.log(random.overview)
+        const poster = document.getElementById('movie-poster').src = `https://image.tmdb.org/t/p/original${random.poster_path}`
+        return random
+    }
+})
