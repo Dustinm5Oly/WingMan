@@ -63,3 +63,40 @@ const foodArray = [
 // for (let i = 0; i < foodArray.length; i++) {
 //     generateFoodArray(foodArray[i])
 // }
+
+
+
+
+
+
+//Api for random Drink info
+
+const drinksButton = document.getElementById('drinks-button');
+
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'cd392a0d33mshb5e9da45523590fp1d3689jsnb521e7aa2bf8',
+		'X-RapidAPI-Host': 'the-cocktail-db.p.rapidapi.com'
+	}
+};
+
+function cocktailApi() {
+    fetch('https://the-cocktail-db.p.rapidapi.com/random.php?a=list&a=alcholic', options)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data)
+        //need an img div blank in index.html file with id="cocktail-image"
+        //need h3 element blank with id="cocktail-name"
+        //need p tag blank with id="instructions"
+        document.getElementById('cocktail-image').src = data.drinks[0].strDrinkThumb
+        document.getElementById('cocktail-name').textContent = (data.drinks[0].strDrink)
+        document.getElementById('cocktail-instructions').textContent = (data.drinks[0].strInstructions)
+    })
+}
+//event listener for button in index.html file
+drinksButton.addEventListener('click', function() {
+    cocktailApi()
+})
