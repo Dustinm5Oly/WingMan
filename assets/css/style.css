@@ -40,8 +40,30 @@ hr {
     box-shadow: 5px 5px 5px black;
 
 }
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     #background {
         background-size: contain;
-    }
+}
+} */
+footer {
+   background-image: url("../images/abstract-black.jpg");
+}
+
+footer h2 {
+    font-size: 20px;
+}
+#food-image[src] {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 5px 5px 5px black;
+}
+
+#movie-poster {
+    width: 10rem;
+    margin-top: 10px;
 }
