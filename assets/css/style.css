@@ -2,16 +2,16 @@ main {
     font-family: 'Montserrat Alternates'; 
 }
 #background {
-    background-image: url("../images/background.jpg");
+    background-image: url(../images/new\ jpeg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 2000px;
 }
+
 html {
     scroll-behavior: smooth;
 }
 header {
-    background-color: black;
     color: white;
     font-family: 'Montserrat Alternates';
 }
@@ -20,6 +20,7 @@ header {
     color: white;
     font-family: 'Montserrat Alternates';
     transition: font-size .2s;
+    
 } 
 .pick:hover {
     color: #D1D1D1;
