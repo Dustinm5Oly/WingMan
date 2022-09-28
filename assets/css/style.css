@@ -31,8 +31,18 @@ hr {
 #cocktail-image {
     height: 100px;
 }
+#food-image[src] {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 5px 5px 5px black;
+}
 
-#movie-poster{
+#movie-poster {
     width: 10rem;
     margin-top: 10px;
 }
