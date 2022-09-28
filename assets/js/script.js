@@ -81,15 +81,15 @@ function movieApi() {
         console.log(random.overview)
         const poster = document.getElementById('movie-poster').src = `https://image.tmdb.org/t/p/original${random.poster_path}`
         return random
-    }
-})
+    };
+
 //consumer clickes button for a random movie suggestion
 //random movie suggestion pops up in suggestion box
 //suggestions are saved in local storage
         document.getElementById('movie-image').src = data.drinks[0].strDrinkThumb
         document.getElementById('movie-title').textContent = (data.movies[0].strMovie)
         document.getElementById('movie-overview').textContent = (data.Movie[0].strDescription)
-
+    })
 }
 
 movieButton.addEventListener('click', function() {
