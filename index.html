@@ -5,26 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="./assets/css/style.css" rel="stylesheet">
 </head>
 <body>
-<header>
-    <nav class="flex p-4">
-        <h1 class="font-bold">Wingman</h1>
-        <ul class="flex align-content: flex-end">
-            <li><a href="">About Us</a></li>
-            <li><a href="">Links to Github</a></li>
-            <li><a href="">Recent Dates</a></li>
+<header id="background">
+    <nav class="p-5">
+        <ul class="flex items-center justify-between">
+          <li>
+            <h1 class="text-lg sm:text-2xl font-bold">Wingman</h1>
+          </li>
+          <span class="flex space-x-4 items-center">
+            <li>
+              <a href="">About US</a>
+            </li>
+            <li>
+              <a href="">Recent Dates</a>
+            </li>
+            <li>
+              <a href="">Github Links</a>
+            </li>
+          </span>
         </ul>
-    </nav>
-    <button></button>
+      </nav>
+        <div class="grid text-center mt-96 py-28 h-screen">
+        <a class="pick underline underline-offset-8 decoration-2" href="#movie">Pick a date</a>
+        </div>
 </header>
 
 <main>
-    <div class="flex justify-center">
-        <div class="flex w-64">
-          Movie
+
+
+<section class="my-5">
+    <div class="flex justify-center justify-around text-center p-2">
+        <div class="flex-col">
+          <h2 class="py-2" id="movie">Movie</h2>
+          <button id="movie-button"class="bg-black text-white p-3 rounded-lg">Click Here</button>
         </div>
         <div class="flex w-64">
           Food
@@ -33,6 +52,54 @@
           Drinks
         </div>
       </div>
+</section>
+<section>
+  <div></div>
+  <h2>Your Past Dates</h2>
+  
+
+</section>
+<div class="links-container">
+    <h1>About Us</h1>
+
+    <div class="about-us bg-black text-white m-3 text-center p-5 flex-wrap flex justify-center justify-around">
+        <div class="group">
+            <img class="p-2 rounded-full h-56"src="./assets/images/andrew.jpg" alt="">
+            <h3>Andrew Eysoldt</h3>
+            <p class="title">(title)</p>
+            <p>Contributions:</p>
+            <a href="#" class="card-link">Github Link</a>
+        </div>
+        <div class="group">
+            <img class="p-2 rounded-full h-56"src="./assets/images/brandon.jpg" alt="">
+            <h3>Brandon Maggiano</h3>
+            <p class="title">(title)</p>
+            <p>Contributions:</p>
+            <a href="#" class="card-link">Github Link</a>
+        </div>
+        <div class="group">
+            <img class="p-2 rounded-full h-56 w-56"src="./assets/images/daniel.jpg" alt="">
+            <h3>Daniel Valean</h3>
+            <p class="title">(title)</p>
+            <p>Contributions:</p>
+            <a href="#" class="card-link">Github Link</a>
+        </div>
+        <div class="group">
+            <img class="p-2 rounded-full h-56 w-56"src="./assets/images/dustin.jpeg" alt="">
+            <h3>Dustin Moore</h3>
+            <p class="title">(title)</p>
+            <p>Contributions:</p>
+            <a href="#" class="card-link">Github Link</a>
+        </div>
+        <div class="group">
+            <img class="p-2 rounded-full h-56 w-56"src="assets\images\miguel.jpg" alt="">
+            <h3>Miguel Gallardo</h3>
+            <p class="title">(title)</p>
+            <p>Contributions:</p>
+            <a href="#" class="card-link">Github Link</a>
+        </div>
+    </div>
+</div>
 </main>
 <script defer src="./assets/js/script.js"></script>
 </body>
