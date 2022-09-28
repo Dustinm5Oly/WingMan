@@ -67,8 +67,9 @@ const foodArray = [
 const movieButton = document.getElementById("movie-button");
 const movieApiKey = '6f3f105acd904176840e0cce36308ce5'
 
-fetch(`https://api.themoviedb.org/3/movie/popular?api_key=6f3f105acd904176840e0cce36308ce5&language=en-US`)
-.then(function (response) {
+function movieApi() {
+    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=6f3f105acd904176840e0cce36308ce5&language=en-US`)
+    .then(function (response) {
     return response.json()
 })
 .then(function (data) {
@@ -85,11 +86,15 @@ fetch(`https://api.themoviedb.org/3/movie/popular?api_key=6f3f105acd904176840e0c
 //consumer clickes button for a random movie suggestion
 //random movie suggestion pops up in suggestion box
 //suggestions are saved in local storage
+        document.getElementById('movie-image').src = data.drinks[0].strDrinkThumb
+        document.getElementById('movie-title').textContent = (data.movies[0].strMovie)
+        document.getElementById('movie-overview').textContent = (data.Movie[0].strDescription)
 
+}
 
-
-
-
+movieButton.addEventListener('click', function() {
+    movieApi()
+})
 //Api for random Drink info
 
 const drinksButton = document.getElementById('drinks-button');
