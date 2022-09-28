@@ -41,3 +41,8 @@ hr {
     border-radius: 6px;
     box-shadow: 5px 5px 5px black;
 }
+
+#movie-poster {
+    width: 10rem;
+    margin-top: 10px;
+}
