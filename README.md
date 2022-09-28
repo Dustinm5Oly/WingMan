@@ -1,6 +1,6 @@
 <h1 align="center">WingMan</h1>  
 <p align="center">
-    <img width="460" height="300" src="Logo Image\Wingman 3b_edited.jpg">
+    <img width="460" height="300" src="assets\Logo Image\Wingman 3b_edited.jpg">
 </p>
 
 
