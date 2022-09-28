@@ -65,23 +65,23 @@ const foodArray = [
 
 //API random movie button
 const movieButton = document.getElementById("movie-button");
+const movieApiKey = '6f3f105acd904176840e0cce36308ce5'
 
-const optionsMovie = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '23dbdfd59cmshfdc72fe72028f7dp17ef4ajsnef11d9ca898c',
-		'X-RapidAPI-Host': 'moviehut-random-movie.p.rapidapi.com'
-	}
-};
-
-fetch('https://moviehut-random-movie.p.rapidapi.com/api/random', optionsMovie)
-	.then(function (response){
-        return response.json()
-        })
-	.then(function (data){
-        console.log(data)})
-	.catch(function (err){
-        console.error(err)});
+fetch(`https://api.themoviedb.org/3/movie/popular?api_key=6f3f105acd904176840e0cce36308ce5&language=en-US`)
+.then(function (response) {
+    return response.json()
+})
+.then(function (data) {
+    for (i=0; i<data.results.length; i++) {
+        // console.log(data.results[i])
+        const random = data.results[Math.floor(Math.random() * data.results.length)]
+        console.log(random)
+        console.log(random.title)
+        console.log(random.overview)
+        const poster = document.getElementById('movie-poster').src = `https://image.tmdb.org/t/p/original${random.poster_path}`
+        return random
+    }
+})
 //consumer clickes button for a random movie suggestion
 //random movie suggestion pops up in suggestion box
 //suggestions are saved in local storage
