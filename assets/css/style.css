@@ -1,15 +1,18 @@
 main {
     font-family: 'Montserrat Alternates'; 
 }
-#background {
-    background-image: url("../images/background.jpg");
-    background-size: cover;
+.background {
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
+.title{
+    margin-right: 2px;
+}
+
 html {
     scroll-behavior: smooth;
 }
 header {
-    background-color: black;
     color: white;
     font-family: 'Montserrat Alternates';
 }
@@ -18,6 +21,10 @@ header {
     color: white;
     font-family: 'Montserrat Alternates';
     transition: font-size .2s;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 0%;
+    vertical-align: middle;
 } 
 .pick:hover {
     color: #D1D1D1;
@@ -31,3 +38,8 @@ hr {
 #cocktail-image {
     height: 100px;
 }
+
+/* @media screen and (max-width:600px) {
+       .pick { height:350px;
+    }
+} */
