@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="./assets/css/style.css" rel="stylesheet">
-    <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
     
@@ -48,14 +47,22 @@
         <div class="flex-col">
           <h2 class="py-2" id="movie">Movie</h2>
           <button id="movie-button"class="bg-black text-white p-3 rounded-lg">Click Here</button>
+          <img id="movie-poster">
         </div>
         <div class="flex-col">
           <h2 class="py-2">Food</h2>
           <button id ="food-button"class="bg-black text-white p-3 rounded-lg">Click Here</button>
+          <img id="food-image" alt="">
+          <h2 id="food-name"></h2>
         </div>
+        <div class="flex w-64">
+          Drinks
         <div class="flex-col">
           <h2 class="py-2">Drinks</h2>
           <button id="drinks-button" class="bg-black text-white p-3 rounded-lg">Click Here</button>
+          <img id="cocktail-image" alt=""></img>
+          <h2 id="cocktail-name"></h2>
+          <p id="cocktail-instructions"></p>
         </div>
       </div>
 </section>
@@ -112,6 +119,6 @@
    </div>
 </footer>
 </main>
-    
+<script defer src="./assets/js/script.js"></script>
 </body>
 </html>
