@@ -126,7 +126,8 @@ function movieApi() {
 
 movieButton.addEventListener('click', function() {
     movieApi()
-})
+    movieButton.style.display = "none"
+}, { once: true})
 //Api for random Drink info
 
 const drinksButton = document.getElementById('drinks-button');
@@ -145,16 +146,17 @@ function cocktailApi() {
         return response.json();
     })
     .then(function (data) {
-        console.log(data)
+        // console.log(data)
         //need an img div blank in index.html file with id="cocktail-image"
         //need h3 element blank with id="cocktail-name"
         //need p tag blank with id="instructions"
         document.getElementById('cocktail-image').src = data.drinks[0].strDrinkThumb
         document.getElementById('cocktail-name').textContent = (data.drinks[0].strDrink)
-        document.getElementById('cocktail-instructions').textContent = (data.drinks[0].strInstructions)
+        // document.getElementById('cocktail-instructions').textContent = (data.drinks[0].strInstructions)
     })
 }
 //event listener for button in index.html file
 drinksButton.addEventListener('click', function() {
     cocktailApi()
-})
+    drinksButton.style.display = "none"
+}, { once: true})

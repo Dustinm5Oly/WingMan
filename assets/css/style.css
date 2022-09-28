@@ -4,6 +4,8 @@ main {
 #background {
     background-image: url("../images/background.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    height: 2000px;
 }
 html {
     scroll-behavior: smooth;
@@ -28,10 +30,21 @@ hr {
     width: 25%;
     margin: auto;
 }
-#cocktail-image {
-    height: 100px;
-}
+#cocktail-image[src] {
+    /* display: flex; */
+    /* justify-content: center; */
+    height: 300px;
+    width: 300px;
+    margin: 20px auto;
+    border-radius: 6px;
+    box-shadow: 5px 5px 5px black;
 
+}
+/* @media only screen and (max-width: 600px) {
+    #background {
+        background-size: contain;
+}
+} */
 footer {
    background-image: url("../images/abstract-black.jpg");
 }
