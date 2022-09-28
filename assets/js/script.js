@@ -77,6 +77,7 @@ function displayFood () {
 
 foodBtn.addEventListener('click', function(){
     displayFood();
+    foodBtn.style.display = "none"
 });
 
 
