@@ -93,7 +93,7 @@ function cocktailApi() {
         //need p tag blank with id="instructions"
         document.getElementById('cocktail-image').src = data.drinks[0].strDrinkThumb
         document.getElementById('cocktail-name').textContent = (data.drinks[0].strDrink)
-        document.getElementById('cocktail-instructions').textContent = (data.drinks[0].strInstructions)
+        // document.getElementById('cocktail-instructions').textContent = (data.drinks[0].strInstructions)
     })
 }
 //event listener for button in index.html file
