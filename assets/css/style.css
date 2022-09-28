@@ -31,3 +31,8 @@ hr {
 #cocktail-image {
     height: 100px;
 }
+
+#movie-poster{
+    width: 10rem;
+    margin-top: 10px;
+}
