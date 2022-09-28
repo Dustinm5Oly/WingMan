@@ -1,12 +1,9 @@
 main {
     font-family: 'Montserrat Alternates'; 
 }
-.background {
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-.title{
-    margin-right: 2px;
+#background {
+    background-image: url(../images/new\ jpeg.jpg);
+    background-size: cover;
 }
 
 html {
@@ -21,10 +18,7 @@ header {
     color: white;
     font-family: 'Montserrat Alternates';
     transition: font-size .2s;
-    justify-content: center;
-    align-content: center;
-    margin-bottom: 0%;
-    vertical-align: middle;
+    
 } 
 .pick:hover {
     color: #D1D1D1;
@@ -39,7 +33,4 @@ hr {
     height: 100px;
 }
 
-/* @media screen and (max-width:600px) {
-       .pick { height:350px;
-    }
-} */
+ 
