@@ -31,6 +31,14 @@ hr {
 #cocktail-image {
     height: 100px;
 }
+
+footer {
+   background-image: url("../images/abstract-black.jpg");
+}
+
+footer h2 {
+    font-size: 20px;
+}
 #food-image[src] {
     display: flex;
     justify-content: center;
