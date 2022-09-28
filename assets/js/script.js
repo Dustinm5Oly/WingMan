@@ -87,7 +87,7 @@ function cocktailApi() {
         return response.json();
     })
     .then(function (data) {
-        console.log(data)
+        // console.log(data)
         //need an img div blank in index.html file with id="cocktail-image"
         //need h3 element blank with id="cocktail-name"
         //need p tag blank with id="instructions"

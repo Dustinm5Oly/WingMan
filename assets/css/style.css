@@ -4,6 +4,8 @@ main {
 #background {
     background-image: url("../images/background.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    /* min-height: 2500px; */
 }
 html {
     scroll-behavior: smooth;
@@ -29,5 +31,12 @@ hr {
     margin: auto;
 }
 #cocktail-image {
+    display: flex;
+    justify-content: center;
     height: 100px;
+}
+@media only screen and (max-width: 50px) {
+    #background {
+        min-height: 2500px;
+    }
 }
