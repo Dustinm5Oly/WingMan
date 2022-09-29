@@ -5,7 +5,8 @@ main {
     background-image: url(../images/new\ jpeg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 2000px;
+    height: 1000px;
+    
 }
 
 html {
@@ -20,6 +21,7 @@ header {
     color: white;
     font-family: 'Montserrat Alternates';
     transition: font-size .2s;
+    height: 45px;
     
 } 
 .pick:hover {
@@ -64,7 +66,21 @@ footer h2 {
     box-shadow: 5px 5px 5px black;
 }
 
-#movie-poster {
-    width: 10rem;
+#movie-poster[src] {
+    padding-top: 5px;
+    height: 300px;
+    width: 360px;
+    margin: 20px auto;
     margin-top: 10px;
+    border-radius: 6px;
+
+}
+.past-section {
+    margin-top: 400px;
+    margin-bottom: 10px; 
+}
+.pastTable {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    padding-top: 5px;
 }
