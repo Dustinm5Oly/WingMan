@@ -138,7 +138,6 @@ drinksButton.addEventListener('click', function() {
     drinksButton.style.display = "none"
 }, { once: true})
 
-
 const datesBtn = document.getElementById('save-dates')
 const datesArr = []
 datesBtn.addEventListener('click', function() {
