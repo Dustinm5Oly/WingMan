@@ -74,7 +74,14 @@ footer h2 {
     box-shadow: 5px 5px 5px black;
     border-radius: 6px;
 }
-
+.about-us a:hover {
+    color: #D1D1D1;
+    opacity: .5;
+}
+.footerLinks a:hover {
+    color: #D1D1D1;
+    opacity: .5;
+}
 @media screen and (max-width: 768px) {
     #clicks {
         display: flex;
