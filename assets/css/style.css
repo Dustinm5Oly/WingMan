@@ -5,7 +5,7 @@ main {
     background-image: url(../images/new\ jpeg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 2000px;
+    height: 1000px;
 }
 
 html {
@@ -17,6 +17,7 @@ header {
 }
 .pick{
     font-size: 55px;
+    height: 45px;
     color: white;
     font-family: 'Montserrat Alternates';
     transition: font-size .2s;
@@ -64,7 +65,24 @@ footer h2 {
     box-shadow: 5px 5px 5px black;
 }
 
-#movie-poster {
-    width: 10rem;
-    margin-top: 10px;
+#movie-poster[src] {
+    margin-top: 5px;
+    height: 300px;
+    width: 300px;
+    margin: 20px auto;
+    margin-top: 20px;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 768px) {
+    #clicks {
+        display: flex;
+        flex-direction: column;
+    }
+    #food-image[src] {
+        display: flex;
+        align-items: center;
+        margin: 20px auto;
+    }
 }
