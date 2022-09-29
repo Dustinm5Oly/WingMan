@@ -21,7 +21,6 @@ header {
     color: white;
     font-family: 'Montserrat Alternates';
     transition: font-size .2s;
-    height:45px;
 } 
 .pick:hover {
     color: #D1D1D1;
@@ -91,5 +90,9 @@ footer h2 {
         display: flex;
         align-items: center;
         margin: 20px auto;
+    }
+    .footerLinks {
+        display: flex;
+        flex-direction: column;
     }
 }
