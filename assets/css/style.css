@@ -7,7 +7,17 @@ main {
     background-repeat: no-repeat;
     height: 1000px;
 }
-
+button {
+    box-shadow: 3px 3px 3px grey;
+    transition: .2s;
+}
+button:hover {
+    font-size: 22px;
+}
+#local {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -33,8 +43,6 @@ hr {
     margin: auto;
 }
 #cocktail-image[src] {
-    /* display: flex; */
-    /* justify-content: center; */
     height: 300px;
     width: 300px;
     margin: 20px auto;
@@ -42,7 +50,9 @@ hr {
     box-shadow: 5px 5px 5px black;
 
 }
-
+#clicks h2 {
+    font-size: 26px;
+}
 footer {
    background-image: url("../images/abstract-black.jpg");
 }
@@ -77,6 +87,26 @@ footer h2 {
 .footerLinks a:hover {
     color: #D1D1D1;
     opacity: .5;
+}
+#past-dates p {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 20px auto;
+    /* word-spacing: 5px; */
+}
+#view-dates {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+}
+#clear-dates {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+.bold {
+    font-weight: bold;
 }
 @media screen and (max-width: 768px) {
     #clicks {

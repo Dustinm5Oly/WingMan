@@ -1,7 +1,6 @@
-console.log ("this is a test")
+console.log ("We all worked very hard on this, we appreciate the learning opportunity!")
 const foodBtn = document.querySelector('#food-button');
-// const foodName = getElementById('#food-image');
-// const foodImg = getElementById('#food-name');
+
 
 const foodArray = [
     {
@@ -81,20 +80,6 @@ foodBtn.addEventListener('click', function(){
 });
 
 
-// let foodSelected= []
-// for (let i = 0; i < foodArray.length; i++) {
-//     foodSelected.push(foodArray[Math.floor(Math.random()*foodArray.length)]);
-//     console.log(generateFoodArray);
-// }
-
-// pizzaEl.children[0].textContent = data.food;
-// pizzaEl.children[1].children[0].setAttribute("src", data.img);
-// pizzaEl.children[1].children[0].setAttribute("alt", data.alt);
-// pizzaEl.children[1].children[0].setAttribute("style", "padding:10px;");
-// }
-
-
-
 //API random movie button
 const movieButton = document.getElementById("movie-button");
 const movieApiKey = '6f3f105acd904176840e0cce36308ce5'
@@ -143,13 +128,8 @@ function cocktailApi() {
         return response.json();
     })
     .then(function (data) {
-        // console.log(data)
-        //need an img div blank in index.html file with id="cocktail-image"
-        //need h3 element blank with id="cocktail-name"
-        //need p tag blank with id="instructions"
         document.getElementById('cocktail-image').src = data.drinks[0].strDrinkThumb
         cocktailName.textContent = (data.drinks[0].strDrink)
-        // document.getElementById('cocktail-instructions').textContent = (data.drinks[0].strInstructions)
     })
 }
 //event listener for button in index.html file
@@ -175,5 +155,28 @@ datesBtn.addEventListener('click', function() {
 const viewDatesBtn = document.getElementById('view-dates')
 const pastDates = document.getElementById('past-dates')
 viewDatesBtn.addEventListener('click', function() {
-    pastDates.textContent += localStorage.getItem('array')
+    const $p1 = document.createElement('p')
+    const dates = JSON.parse(localStorage.getItem('array'))
+    if (dates === null) {
+        // const $h2 = document.createElement('h2')
+        $p1.textContent = ("There are no saved dates.")
+        pastDates.appendChild($p1)
+    } else {
+        $p1.textContent = ""
+    for (let i=0; i<dates.length; i++) {
+        var drink = document.createElement('p').textContent = "Drink: "
+        // drink.classList.add("bold");
+        const movie = document.createElement('p').textContent = "Movie: "
+        const food = document.createElement('p').textContent = "Food: "
+        $p1.textContent = (`${drink} ${dates[i].cocktailName} ${movie} ${dates[i].movieName} ${food} ${dates[i].dinnerName}`)
+        pastDates.appendChild($p1)
+    }
+}
+    console.log(dates)
+})
+
+const clearBtn = document.getElementById('clear-dates')
+clearBtn.addEventListener('click', function() {
+    localStorage.clear()
+    window.location.reload()
 })
