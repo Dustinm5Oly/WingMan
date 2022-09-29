@@ -42,11 +42,7 @@ hr {
     box-shadow: 5px 5px 5px black;
 
 }
-/* @media only screen and (max-width: 600px) {
-    #background {
-        background-size: contain;
-}
-} */
+
 footer {
    background-image: url("../images/abstract-black.jpg");
 }

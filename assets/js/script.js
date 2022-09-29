@@ -65,13 +65,13 @@ function generateFoodArray(data) {
 const result = generateFoodArray(foodArray)
 console.log(result);
 
+let dinnerDisplay = document.getElementById("food-name");
 function displayFood () {
-    let dinnerFood = JSON.stringify(result.food);
+    // let dinnerFood = JSON.stringify(result.food);
     let dinnerImg = result.img
-    let dinnerDisplay = document.getElementById("food-name");
     let dinnerImgDisplay = document.getElementById('food-image')
     console.log(dinnerImg);
-    dinnerDisplay.textContent = dinnerFood;
+    dinnerDisplay.textContent = result.food;
     dinnerImgDisplay.setAttribute("src", dinnerImg);
 }
 
@@ -98,6 +98,7 @@ foodBtn.addEventListener('click', function(){
 //API random movie button
 const movieButton = document.getElementById("movie-button");
 const movieApiKey = '6f3f105acd904176840e0cce36308ce5'
+const movieTitle = document.getElementById('movie-title')
 
 function movieApi() {
     fetch(`https://api.themoviedb.org/3/movie/popular?api_key=6f3f105acd904176840e0cce36308ce5&language=en-US`)
@@ -112,15 +113,9 @@ function movieApi() {
         console.log(random.title)
         console.log(random.overview)
         const poster = document.getElementById('movie-poster').src = `https://image.tmdb.org/t/p/original${random.poster_path}`
-        return random
-    };
-
-//consumer clickes button for a random movie suggestion
-//random movie suggestion pops up in suggestion box
-//suggestions are saved in local storage
-        document.getElementById('movie-image').src = data.drinks[0].strDrinkThumb
-        document.getElementById('movie-title').textContent = (data.movies[0].strMovie)
-        document.getElementById('movie-overview').textContent = (data.Movie[0].strDescription)
+        movieTitle.textContent = (random.title)
+        document.getElementById('movie-overview').textContent = (random.overview)
+    }
     })
 }
 
@@ -140,6 +135,8 @@ const options = {
 	}
 };
 
+const cocktailName = document.getElementById('cocktail-name')
+
 function cocktailApi() {
     fetch('https://the-cocktail-db.p.rapidapi.com/random.php?a=list&a=alcholic', options)
     .then(function (response) {
@@ -151,7 +148,7 @@ function cocktailApi() {
         //need h3 element blank with id="cocktail-name"
         //need p tag blank with id="instructions"
         document.getElementById('cocktail-image').src = data.drinks[0].strDrinkThumb
-        document.getElementById('cocktail-name').textContent = (data.drinks[0].strDrink)
+        cocktailName.textContent = (data.drinks[0].strDrink)
         // document.getElementById('cocktail-instructions').textContent = (data.drinks[0].strInstructions)
     })
 }
@@ -160,3 +157,23 @@ drinksButton.addEventListener('click', function() {
     cocktailApi()
     drinksButton.style.display = "none"
 }, { once: true})
+
+
+const datesBtn = document.getElementById('save-dates')
+const datesArr = []
+datesBtn.addEventListener('click', function() {
+    const arr = JSON.parse(localStorage.getItem('array')) || []
+    localStorage.setItem('cocktail', cocktailName.textContent)
+    localStorage.setItem('movie', movieTitle.textContent)
+    localStorage.setItem('dinner', dinnerDisplay.textContent)
+
+    arr.push({cocktailName: cocktailName.textContent,movieName: movieTitle.textContent,dinnerName: dinnerDisplay.textContent})
+
+    localStorage.setItem('array', JSON.stringify(arr))
+})
+
+const viewDatesBtn = document.getElementById('view-dates')
+const pastDates = document.getElementById('past-dates')
+viewDatesBtn.addEventListener('click', function() {
+    pastDates.textContent += localStorage.getItem('array')
+})
