@@ -21,7 +21,7 @@ header {
     color: white;
     font-family: 'Montserrat Alternates';
     transition: font-size .2s;
-    
+    height:45px;
 } 
 .pick:hover {
     color: #D1D1D1;
