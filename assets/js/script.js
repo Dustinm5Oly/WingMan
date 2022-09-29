@@ -160,3 +160,16 @@ drinksButton.addEventListener('click', function() {
     cocktailApi()
     drinksButton.style.display = "none"
 }, { once: true})
+
+const datesBtn = document.getElementById('save-dates')
+const datesArr = []
+datesBtn.addEventListener('click', function() {
+    const arr = JSON.parse(localStorage.getItem('array')) || []
+    localStorage.setItem('cocktail', cocktailName.textContent)
+    localStorage.setItem('movie', movieTitle.textContent)
+    localStorage.setItem('dinner', dinnerDisplay.textContent)
+
+    arr.push({cocktailName: cocktailName.textContent,movieName: movieTitle.textContent,dinnerName: dinnerDisplay.textContent})
+
+    localStorage.setItem('array', JSON.stringify(arr))
+})
