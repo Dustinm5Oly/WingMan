@@ -173,3 +173,9 @@ datesBtn.addEventListener('click', function() {
 
     localStorage.setItem('array', JSON.stringify(arr))
 })
+
+const viewDatesBtn = document.getElementById('view-dates')
+const pastDates = document.getElementById('past-dates')
+viewDatesBtn.addEventListener('click', function() {
+    pastDates.textContent += localStorage.getItem('array')
+})
