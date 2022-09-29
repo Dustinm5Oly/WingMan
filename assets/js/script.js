@@ -4,42 +4,42 @@ const foodBtn = document.querySelector('#food-button');
 
 const foodArray = [
     {
-        food:"Pizza",
+        food:`Pizza`,
         img:`./assets/foodImages/pizza.avif`,
         alt:"Picture of a Pizza",
     },
     {
-        food:"Burger",
+        food:`Burger`,
         img:`./assets/foodImages/burger.avif`,
         alt:"Picture of a Burger",
     },
     {
-        food:"Pasta",
+        food:`Pasta`,
         img:`./assets/foodImages/pasta.avif`,
         alt:"Picture of Pasta",
     },
     {
-        food:"Ribs",
+        food:`Ribs`,
         img:`./assets/foodImages/ribs.avif`,
         alt:"Picture of Ribs",
     },
     {
-        food:"Tacos",
+        food:`Tacos`,
         img:`./assets/foodImages/tacos.avif`,
         alt:"Picture of Tacos",
     },
     {
-        food:"Steak",
+        food:`Steak`,
         img:`./assets/foodImages/steak.avif`,
         alt:"Picture of a Steak",
     },
     {
-        food:"Wings",
+        food:`Wings`,
         img: `./assets/foodImages/wings.avif`,
         alt:"Picture of Wings",
     },
     {
-        food:"Sushi",
+        food:`Sushi`,
         img:`./assets/foodImages/sushi.avif`,
         alt:"Picture of Sushi",
     },
