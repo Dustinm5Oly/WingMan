@@ -37,6 +37,7 @@ header {
     opacity: .5;
 }
 
+
 hr {
     width: 25%;
     margin: auto;
@@ -63,6 +64,32 @@ footer {
 footer h2 {
     font-size: 20px;
 }
+
+.footerLogo[src] {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 5px;
+    height: 100px;
+    width: 100px;
+    margin: 20px auto;
+    margin-top: 40px;
+    box-shadow: 1px 1px 20px 2px white;
+    border-radius: 6px;
+}
+.headerLogo[src] {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 5px;
+    height: 150px;
+    width: 150px;
+    margin: 20px auto;
+    margin-top: 20px;
+    box-shadow: 1px 1px 20px 2px white;
+    border-radius: 6px;
+}
+
 #food-image[src] {
     display: flex;
     justify-content: center;
@@ -100,5 +127,9 @@ footer h2 {
         display: flex;
         align-items: center;
         margin: 20px auto;
+    }
+    .footerLinks {
+        display: flex;
+        flex-direction: column;
     }
 }
