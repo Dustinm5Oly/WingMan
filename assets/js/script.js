@@ -161,19 +161,15 @@ drinksButton.addEventListener('click', function() {
 }, { once: true})
 
 
-var pastdates = {
-    movie: movie,
-    food: food,
-    drink: drink
-};
+const datesBtn = document.getElementById('save-dates')
+const datesArr = []
+datesBtn.addEventListener('click', function() {
+    const arr = JSON.parse(localStorage.getItem('array')) || []
+    localStorage.setItem('cocktail', cocktailName.textContent)
+    localStorage.setItem('movie', movieTitle.textContent)
+    localStorage.setItem('dinner', dinnerDisplay.textContent)
 
-const pastDates = {
-    Movie: "movie-poster",
-    food: "food-image",
-    drinks: "cocktail-image",
+    arr.push({cocktailName: cocktailName.textContent,movieName: movieTitle.textContent,dinnerName: dinnerDisplay.textContent})
 
-}
-
-    window.localStorage.setItem('food', 'movieApi', 'cocktailApi', JSON.stringify(pastDates));
-
-    JSON.parse(window.localStorage.getItem('generatefoodarray.data', 'movieApi', 'cocktailApi'));
+    localStorage.setItem('array', JSON.stringify(arr))
+})

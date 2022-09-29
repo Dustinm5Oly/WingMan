@@ -5,7 +5,7 @@ main {
     background-image: url(../images/new\ jpeg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 2000px;
+    height: 1000px;
 }
 
 html {
@@ -17,10 +17,11 @@ header {
 }
 .pick{
     font-size: 55px;
+    height: 45px;
     color: white;
     font-family: 'Montserrat Alternates';
     transition: font-size .2s;
-    
+    height:45px;
 } 
 .pick:hover {
     color: #D1D1D1;
@@ -65,9 +66,30 @@ footer h2 {
 }
 
 #movie-poster[src] {
+    margin-top: 5px;
     height: 300px;
-    width: 260px;
+    width: 300px;
     margin: 20px auto;
-    border-radius: 6px;
+    margin-top: 20px;
     box-shadow: 5px 5px 5px black;
+    border-radius: 6px;
+}
+.about-us a:hover {
+    color: #D1D1D1;
+    opacity: .5;
+}
+.footerLinks a:hover {
+    color: #D1D1D1;
+    opacity: .5;
+}
+@media screen and (max-width: 768px) {
+    #clicks {
+        display: flex;
+        flex-direction: column;
+    }
+    #food-image[src] {
+        display: flex;
+        align-items: center;
+        margin: 20px auto;
+    }
 }
