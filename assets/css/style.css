@@ -47,7 +47,7 @@ hr {
 }
 } */
 footer {
-   background-image: url("../images/abstract-black.jpg");
+    background-image: url("../images/abstract-black.jpg");
 }
 
 footer h2 {
@@ -64,7 +64,10 @@ footer h2 {
     box-shadow: 5px 5px 5px black;
 }
 
-#movie-poster {
-    width: 10rem;
-    margin-top: 10px;
+#movie-poster[src] {
+    height: 300px;
+    width: 260px;
+    margin: 20px auto;
+    border-radius: 6px;
+    box-shadow: 5px 5px 5px black;
 }

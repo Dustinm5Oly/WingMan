@@ -93,8 +93,6 @@ foodBtn.addEventListener('click', function(){
 // pizzaEl.children[1].children[0].setAttribute("style", "padding:10px;");
 // }
 
-
-
 //API random movie button
 const movieButton = document.getElementById("movie-button");
 const movieApiKey = '6f3f105acd904176840e0cce36308ce5'
@@ -112,13 +110,14 @@ function movieApi() {
         console.log(random.title)
         console.log(random.overview)
         const poster = document.getElementById('movie-poster').src = `https://image.tmdb.org/t/p/original${random.poster_path}`
+        const title = document.getElementById('movie-title').src = `https://image.tmdb.org/t/p/original${random.overview_path}`
         return random
     };
 
 //consumer clickes button for a random movie suggestion
 //random movie suggestion pops up in suggestion box
 //suggestions are saved in local storage
-        document.getElementById('movie-image').src = data.drinks[0].strDrinkThumb
+        document.getElementById('movie-poster').src = data.drinks[0].strDrinkThumb
         document.getElementById('movie-title').textContent = (data.movies[0].strMovie)
         document.getElementById('movie-overview').textContent = (data.Movie[0].strDescription)
     })
@@ -160,3 +159,21 @@ drinksButton.addEventListener('click', function() {
     cocktailApi()
     drinksButton.style.display = "none"
 }, { once: true})
+
+
+var pastdates = {
+    movie: movie,
+    food: food,
+    drink: drink
+};
+
+const pastDates = {
+    Movie: "movie-poster",
+    food: "food-image",
+    drinks: "cocktail-image",
+
+}
+
+    window.localStorage.setItem('food', 'movieApi', 'cocktailApi', JSON.stringify(pastDates));
+
+    JSON.parse(window.localStorage.getItem('generatefoodarray.data', 'movieApi', 'cocktailApi'));
