@@ -83,13 +83,13 @@
 ----
 
 ## Desktop Demo
-<img src= "assets\GIF Image\Wingman.gif"></img>
+<img src= "assets\GIF Image\GIF Desktop.gif"></img>
 
 ----
 
 ## Mobile Demo
 <p align="center">
-<img src= "assets\GIF Image\WingmanMobile.gif"></img>
+<img src= "assets\GIF Image\GIF Mobile.gif"></img>
 </p>
 
 ----
