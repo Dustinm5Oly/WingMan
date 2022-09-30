@@ -148,7 +148,7 @@ footer h2 {
 .star{
     color: goldenrod;
     font-size: 1.0rem;
-    padding: 0 1px; /* space out the stars */
+    padding: 1px; /* space out the stars */
   }
   .star::before{
     content: '\2606';    /* star outline */
@@ -161,8 +161,9 @@ footer h2 {
   
   .stars{
     counter-reset: rateme 0;   
-    font-size: 1.0rem;
+    font-size: 1rem;
     font-weight: 900;
+    display: none;
   }
   .star.rated{
       counter-increment: rateme 1;
@@ -170,9 +171,7 @@ footer h2 {
   .stars::after{
       content: counter(rateme) '/5';
   }
-  aside {
-    display: none;
-  }
+
 
 /* Responsive layout - make the columns stack on top of each other instead of next to each other */
 @media (max-width: 400px) {

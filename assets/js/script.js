@@ -146,14 +146,16 @@ datesBtn.addEventListener('click', function() {
     localStorage.setItem('movie', movieTitle.textContent)
     localStorage.setItem('dinner', dinnerDisplay.textContent)
 
-    arr.push({cocktailName: cocktailName.textContent,movieName: movieTitle.textContent,dinnerName: dinnerDisplay.textContent})
+    arr.push({rating: stars,cocktailName: cocktailName.textContent,movieName: movieTitle.textContent,dinnerName: dinnerDisplay.textContent})
 
     localStorage.setItem('array', JSON.stringify(arr))
 })
 
-const viewDatesBtn = document.getElementById('view-dates',)
+const viewDatesBtn = document.getElementById('view-dates')
 const pastDates = document.getElementById('past-dates')
+const stars = document.querySelector('.stars')
 viewDatesBtn.addEventListener('click', function() {
+    stars.style.display = "flex";
     const $p1 = document.createElement('p')
     const dates = JSON.parse(localStorage.getItem('array'))
     if (dates === null) {
@@ -163,6 +165,7 @@ viewDatesBtn.addEventListener('click', function() {
     } else {
         $p1.textContent = ""
     for (let i=0; i<dates.length; i++) {
+        const stars = document.querySelector('.stars')
         var drink = document.createElement('p').textContent = "Drink: "
         // drink.classList.add("bold");
         const movie = document.createElement('p').textContent = "Movie: "
@@ -205,9 +208,6 @@ function setRating(ev){
     document.querySelector('.stars').setAttribute('data-rating', num);
 }
 
-function showStars() {
-    document.getElementById("stars").style.display = "stars";
-}
 
 const clearBtn = document.getElementById('clear-dates')
 clearBtn.addEventListener('click', function() {
