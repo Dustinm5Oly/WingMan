@@ -11,9 +11,26 @@
 * Our motivation to create this project is to help couples decide on a dinner/movie date without fighting over what to select.
 * Our group designed this webpage to help understand how to work together on a group project through Github and further our knowledge on API calls.
 * The webpage allows the user to generate a random movie, food and drink for their date. While also being able to rate their previous dates based on the random selections.
-* <!- We need to enter what we learned from this group project -->
+* What we learned throughout the project:
+    * **Andrew Eysoldt**
+        * As a web developer Andrew was able learn a new technology "Tailwind", by researching the technology and applying to the webpage
+        * As a web developer Andrew was able to overcome the challenges of working on a project in a team environment and apply to this project.
+    * **Brandon Maggiano**
+        * Brandon was able to learn how to set arrays of objects into local storage using the same key value, then how to access those items and traverse through them to print them to the user in a readable format.
+        * As a web developer Brandon was able to learn how to efficiently create fetch calls using JS and become even more efficient at traversing through the data to find and print the objects to display to the user.
+    * **Miguel Gallardo**
+        * As a web developer Miguel learned how to create links that takes the user into a new tab to prevent the confusion to the user of assuming that the new location was the same webpage.
+        * Miguel was also able to learn the process of linking and styling images to display to the webpage.
+    * **Daniel Valean**
+        * As a web developer Daniel was able to learn the fundamentals of building JavaScript API calls.
+        * Daniel was able to gain the knowledge of establishing local storage with a responsive layout.
+        * Daniel was able to learn how to apply a 5 star rating user input to a webpage for the user to rate an experience.
+    * **Dustin Moore**
+        * As a web developer Dustin was able to learn the process of managing a team of developers to obtain a combined desired outcome.
+        * In addition Dustin was able to overcome the obstacles of reviewing the GitHub processes and what each developer must to do make sure the desired code was merged to the main branch.
+        * Dustin was also able to learn how to pick from an array at random and display through user input.
 
-[WingMan Deployed Application](https://dustinm5oly.github.io/WingMan/)
+## [WingMan Deployed Application](https://dustinm5oly.github.io/WingMan/)
 
 ----
 
