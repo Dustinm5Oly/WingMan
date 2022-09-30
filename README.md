@@ -44,7 +44,7 @@
 * [Credits](#credits)
 * [Technology Used](#technologies-used)
 * [Badges](#badges)
-* [How to Contribute](#how-to-contribute)
+* [Questions](#questions)
 * [Tests](#tests)
 * [License](#license)
 
@@ -128,7 +128,7 @@
 ## Questions
 *For further questions:*
 
-If you have any questions, or additional feedback, please contact our GitHub Repository and we will get back to you as soon as possible.
+If you have any questions, how to contribute or additional feedback, please contact our GitHub Repository and we will get back to you as soon as possible.
 
 *Contact Info:*
 
