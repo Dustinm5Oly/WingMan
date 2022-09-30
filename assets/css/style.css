@@ -143,6 +143,47 @@ footer h2 {
 .bold {
     font-weight: bold;
 }
+
+/* 5 star rating*/
+.star{
+    color: goldenrod;
+    font-size: 1.0rem;
+    padding: 0 1px; /* space out the stars */
+  }
+  .star::before{
+    content: '\2606';    /* star outline */
+    cursor: pointer;
+  }
+  .star.rated::before{
+    /* the style for a selected star */
+    content: '\2605';  /* filled star */
+  }
+  
+  .stars{
+    counter-reset: rateme 0;   
+    font-size: 1.0rem;
+    font-weight: 900;
+  }
+  .star.rated{
+      counter-increment: rateme 1;
+  }
+  .stars::after{
+      content: counter(rateme) '/5';
+  }
+  aside {
+    display: none;
+  }
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  /* Hide the right column on small screens */
+  .right {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
     #clicks {
         display: flex;
