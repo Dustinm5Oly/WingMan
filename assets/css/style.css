@@ -128,7 +128,7 @@ footer h2 {
     border: 1px solid black;
     border-radius: 6px;
     margin: 20px auto;
-    /* word-spacing: 5px; */
+    font-size: 20px;
 }
 #view-dates {
     margin-top: 20px;
@@ -142,6 +142,9 @@ footer h2 {
 }
 .bold {
     font-weight: bold;
+}
+h5 {
+    font-size: 40px;
 }
 @media screen and (max-width: 768px) {
     #clicks {
