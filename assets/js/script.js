@@ -171,7 +171,7 @@ viewDatesBtn.addEventListener('click', function() {
         console.log(dates[i].movieName)
     }
 }
-}, {once: true})
+})
 
 //Event listener for movie button that will run the movieAPI function, then hide the button
 //so the user can't click again
