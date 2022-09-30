@@ -28,60 +28,60 @@ checkThree.style.display = 'none'
 //Array of food, link to food image, and alt for best practice
 const foodArray = [
     {
-        food:`Pizza`,
-        img:`./assets/foodImages/pizza.avif`,
-        alt:"Picture of a Pizza",
+        food: `Pizza`,
+        img: `./assets/foodImages/pizza.avif`,
+        alt: "Picture of a Pizza",
     },
     {
-        food:`Burger`,
-        img:`./assets/foodImages/burger.avif`,
-        alt:"Picture of a Burger",
+        food: `Burger`,
+        img: `./assets/foodImages/burger.avif`,
+        alt: "Picture of a Burger",
     },
     {
-        food:`Pasta`,
-        img:`./assets/foodImages/pasta.avif`,
-        alt:"Picture of Pasta",
+        food: `Pasta`,
+        img: `./assets/foodImages/pasta.avif`,
+        alt: "Picture of Pasta",
     },
     {
-        food:`Ribs`,
-        img:`./assets/foodImages/ribs.avif`,
-        alt:"Picture of Ribs",
+        food: `Ribs`,
+        img: `./assets/foodImages/ribs.avif`,
+        alt: "Picture of Ribs",
     },
     {
-        food:`Tacos`,
-        img:`./assets/foodImages/tacos.avif`,
-        alt:"Picture of Tacos",
+        food: `Tacos`,
+        img: `./assets/foodImages/tacos.avif`,
+        alt: "Picture of Tacos",
     },
     {
-        food:`Steak`,
-        img:`./assets/foodImages/steak.avif`,
-        alt:"Picture of a Steak",
+        food: `Steak`,
+        img: `./assets/foodImages/steak.avif`,
+        alt: "Picture of a Steak",
     },
     {
-        food:`Wings`,
+        food: `Wings`,
         img: `./assets/foodImages/wings.avif`,
-        alt:"Picture of Wings",
+        alt: "Picture of Wings",
     },
     {
-        food:`Sushi`,
-        img:`./assets/foodImages/sushi.avif`,
-        alt:"Picture of Sushi",
+        food: `Sushi`,
+        img: `./assets/foodImages/sushi.avif`,
+        alt: "Picture of Sushi",
     },
     {
         food: `Salad`,
         img: `./assets/foodImages/salad.avif`,
-        alt:"Picture of a Salad",
+        alt: "Picture of a Salad",
     },
     {
         food: `Fried Rice`,
-        img:`./assets/foodImages/fried-rice.avif`,
-        alt:"Picture of Fried Rice",
+        img: `./assets/foodImages/fried-rice.avif`,
+        alt: "Picture of Fried Rice",
     },
 ];
 //Function to generate random food name, image, and alt 
 function generateFoodArray(data) {
-    for (let i = 0; i < foodArray.length; i++); 
-    const randomFood = Math.floor(Math.random()*foodArray.length)
+    for (let i = 0; i < foodArray.length; i++);
+    const randomFood = Math.floor(Math.random() * foodArray.length)
     const item = foodArray[randomFood];
     return item;
 }
@@ -127,13 +127,13 @@ const options = {
 //path built into the API
 function cocktailApi() {
     fetch('https://the-cocktail-db.p.rapidapi.com/random.php?a=list&a=alcholic', options)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        document.getElementById('cocktail-image').src = data.drinks[0].strDrinkThumb
-        cocktailName.textContent = (data.drinks[0].strDrink)
-    })
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            document.getElementById('cocktail-image').src = data.drinks[0].strDrinkThumb
+            cocktailName.textContent = (data.drinks[0].strDrink)
+        })
 }
 
 //Event listener for viewing dates, once clicked, it will create a p tag in the index, grab the 
